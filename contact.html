@@ -4,26 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>State of Arizona - Contact</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    
+    <img src="assets/seal.svg" alt="Arizona Great Seal Image" id="seal" href="index.html">
     <header>
-
+        <h1>The State of Arizona</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Arizona Home</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="phoenix.html">City of Phoenix</a></li>
+                <li><a href="tucson.html">City of Tucson</a></li>
+                <li><a href="flagstaff.html">City of Flagstaff</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section>
-
-    </section>
-
     <aside>
-
+        <p>We would love to hear any comments, concerns, or suggestions from our current residents or prospective future residents!</p>
     </aside>
 
+    <section class="contactsection">
+        <h2>Please feel free to reach out to us via completion of the following form</h2>
+        <form id="form">
+            <label for="firstname">First Name:</label><br>
+            <input type="text" id="firstname" name="firstname" placeholder="First Name"><br>
+            <label for="lastname">Last Name:</label><br>
+            <input type="text" id="lastname" name="lastname" placeholder="Last Name"><br>
+            <label for="email">Email address:</label><br>
+            <input type="text" id="email" name="email" placeholder="Email"><br>
+            <label for="emailconf">Please confirm email address:</label><br>
+            <input type="text" id="emailconf" name="emailconf" placeholder="Email"><br>
+            <label for="comment">Comment or question:</label><br>
+            <input type="text" id="comment" name="comment" placeholder="Comment"><br>
+            <input type="submit" value="Submit"><br>
+        </form>
+        <img src="assets/cactus.jpg" alt="Suguaro Cactus" width="224" height="337">
+    </section>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const checkEmail = () => {
+                console.log("Verifying email...");
+                const email = document.getElementById('email');
+                const emailConf = document.getElementById("emailconf");
+        
+                const emailValue = email.value.trim(); // Trim leading/trailing spaces
+                const emailConfValue = emailConf.value.trim();
+        
+                if (emailValue === emailConfValue) {
+                    alert("Emails match.");
+                } else {
+                    alert("Please check email inputs.");
+                    event.preventDefault();
+                }
+            };
+        
+            const form = document.getElementById("form");
+            form.addEventListener("submit", checkEmail);
+        });
+    </script>
+    
+
     <footer>
-
+        <div class="footer-content">
+          <p>Follow us on:</p>
+          <a href="https://www.facebook.com/GovernorHobbs/" target="_blank" rel="noopener noreferrer"> <img src="assets/facebook.svg" alt="Facebook logo">
+          </a>
+          <a href="https://twitter.com/AZGOV" target="_blank" rel="noopener noreferrer"> <img src="assets/x.svg" alt="Other logo">
+          </a>
+          <p>Copyright 2024. All rights reserved.</p>
+        </div>
     </footer>
-
 </body>
-
 </html>
