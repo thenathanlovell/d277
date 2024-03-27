@@ -11,7 +11,6 @@ body {
     margin-bottom: 10px;
     margin-left: auto;
     margin-right: auto;
-    position: relative;
 }
 
 header {
@@ -67,7 +66,16 @@ aside {
     color:rgb(240, 210, 70);
     height: 600px;
     overflow-y: auto;
+    position: relative;
 }
+
+.state-flag {
+    position: absolute;
+    bottom: 100px;
+    right: 110px; 
+    width: 80px;
+    height: 53.3px;
+  }
 
 footer {
     background-color: rgb(171, 42, 65);
@@ -93,7 +101,6 @@ footer {
 }
 
 .copyright {
-  position: absolute;
   bottom: 0;
   right: 0;
   font-size: 12px;

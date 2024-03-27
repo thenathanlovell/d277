@@ -23,6 +23,8 @@
 
     <aside>
         <p>We would love to hear any comments, concerns, or suggestions from our current residents or prospective future residents!</p>
+        <img src="assets/azflag.png" alt="Arizona State Flag" class="state-flag">
+
     </aside>
 
     <section class="contactsection">
@@ -46,11 +48,11 @@
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const checkEmail = () => {
-                console.log("Verifying email...");
+                
                 const email = document.getElementById('email');
                 const emailConf = document.getElementById("emailconf");
         
-                const emailValue = email.value.trim(); // Trim leading/trailing spaces
+                const emailValue = email.value.trim(); 
                 const emailConfValue = emailConf.value.trim();
         
                 if (emailValue === emailConfValue) {
